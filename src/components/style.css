@@ -1,0 +1,97 @@
+body{
+background-color: white;
+}
+
+
+
+.modal-open .fade:not(.show) {
+  opacity: 0.8;
+}
+.modal.fade .modal-dialog {
+  transition: transform .3s ease-out;
+  transform: translate(0,50%);
+  top: 15%;
+}
+
+.login{
+  background-image: url("../assests/image_1.webp");
+  height: 100vh;
+  width: 100%;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+
+}
+
+.field-name{
+  color: red;
+}
+
+
+.sign-up{
+  background-image: url("../assests/image_2.webp");
+  height: 100vh;
+  width: 100%;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+
+
+
+.form_container{
+
+
+  width: 30% !important;
+}
+
+@media screen and (max-width: 1000px){
+  .form_container{
+
+      width: 45%;
+  }
+  
+}
+
+@media screen and (max-width: 700px){
+  .form_container{
+
+      width: 65%;
+  }
+  
+}
+
+.form_container{
+
+
+  width: 30% !important;
+}
+
+@media screen and (max-width: 1000px){
+  .form_container{
+
+      width: 45%;
+  }
+  
+}
+
+@media screen and (max-width: 700px){
+  .form_container{
+
+      width: 65%;
+  }
+  
+}
+
+.Invent-man{
+  background-image: url("../assests/image_16");
+  height: 100vh;
+  width: 100%;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
