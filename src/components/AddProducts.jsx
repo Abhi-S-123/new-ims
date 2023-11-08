@@ -77,7 +77,6 @@ const AddProducts = () => {
     });
     getFetchData();
   };
-
   const getFetchData = async () => {
     const data = await axios.get("http://localhost:7200/product");
     if (data.data.status === 200) {
@@ -86,7 +85,7 @@ const AddProducts = () => {
       setDataList([]);
     }
   };
-
+  console.log("Abhishek");
   useEffect(() => {
     getFetchData();
   }, []);
@@ -149,12 +148,12 @@ const AddProducts = () => {
       <Sidebar />
       <div className="container ">
         <div
-          className="crud shadow-lg p-3 mb-5  bg-body rounded"
-          style={{ marginLeft: "100px", marginTop: "20px" }}
+          className="crud container shadow-lg p-3 mb-5  bg-body rounded"
+          style={{ marginLeft: "7%", marginTop: "20px" }}
         >
           <div className="row ">
             <div className="col-sm-3 mt-5 mb-4  text-gred"></div>
-            <div className="d-flex justify-content-between mt-5 ">
+            <div className="d-flex justify-content-between mt-3 ">
               <h1>
                 <b style={{ color: "green" }}>Products Records</b>
               </h1>
