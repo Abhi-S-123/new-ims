@@ -59,6 +59,7 @@ const Reports = () => {
 
   const handleOptionClick = (e) => {
     console.log(e.target.value);
+    console.log("Butter");
   };
   console.log(options);
   const GetAllCustometr = async () => {
@@ -224,7 +225,7 @@ const Reports = () => {
                         class="btn btn-danger"
                         onClick={() => removeItem(index)}
                       >
-                        Remove
+                        Remove hju
                       </button>
                     </td>
                   </tr>
