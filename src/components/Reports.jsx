@@ -1,19 +1,8 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
-// import "bootstrap/dist/css/bootstrap.min.css";
 import { useState, useEffect } from "react";
-// import {} from "react-bootstrap";
-// import { Link } from "react-router-dom";
 import axios from "axios";
 import Header from "./Header";
 import Sidebar from "./Sidebar";
 import React, { useRef } from "react";
-import { useReactToPrint } from "react-to-print";
-import "./Reports.css";
-// import { useForm } from "react-hook-form";
-// import * as yup from "yup";
-// import { yupResolver } from "@hookform/resolvers/yup";
-// import { ToastContainer, toast } from "react-toastify";
-// import "react-toastify/dist/ReactToastify.css";
 
 const Reports = () => {
   const componentRef = useRef();
@@ -21,15 +10,10 @@ const Reports = () => {
   const [reportActive, setReportActive] = useState(false);
   const [report, setReport] = useState([]);
 
-  const handleReportClick = (e) => {
-    console.log(e.target.value);
-  };
-
   const GetAllReports = async () => {
     const data = await axios.get(
       "http://localhost:7200/get-all-transaction-reports"
     );
-    console.log(data);
 
     if (data.status === 200) {
       setReport(data.data);
