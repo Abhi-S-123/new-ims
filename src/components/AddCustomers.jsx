@@ -156,15 +156,16 @@ const AddCustomers = () => {
       <Sidebar />
       <div className="container ">
         <div
-          className="crud shadow-lg p-3 mb-5  bg-body rounded"
-          style={{ marginLeft: "100px", marginTop: "20px" }}
+          className="crud shadow-lg p-3 mb-1  bg-body rounded w-100"
+          style={{ marginLeft: "98px", marginTop: "20px" }}
         >
           <div className="row ">
-            <div className="col-sm-3 mt-5 mb-4  text-gred"></div>
-            <div className="d-flex justify-content-between mt-5 ">
+            <div className="col-sm-6 mt-5 mb-1  text-gred"></div>
+            <div className="d-flex justify-content-between mt-3 ">
               <h1>
                 <b style={{ color: "green" }}>Customers Records</b>
               </h1>
+
               <button
                 onSubmit={handleSubmit}
                 type="submit"
@@ -176,6 +177,16 @@ const AddCustomers = () => {
               </button>
             </div>
             <div className="col-sm-3 offset-sm-1  mt-5 mb-4 text-gred"></div>
+            <div class="input-group mb-3">
+              <div class="form-outline">
+                <input
+                  id="search-focus"
+                  type="search"
+                  class="form-control"
+                  placeholder="Search"
+                />
+              </div>
+            </div>
           </div>
           <div className="row">
             <div className="table-responsive ">
