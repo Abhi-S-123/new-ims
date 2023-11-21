@@ -3,12 +3,17 @@ import axios from "axios";
 import Header from "./Header";
 import Sidebar from "./Sidebar";
 import React, { useRef } from "react";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 const Reports = () => {
   const componentRef = useRef();
 
   const [reportActive, setReportActive] = useState(false);
   const [report, setReport] = useState([]);
+
+  const [startDate, setStartDate] = useState([]);
+  const [endDate, setEndDate] = useState([]);
 
   const GetAllReports = async () => {
     const data = await axios.get(
@@ -26,12 +31,29 @@ const Reports = () => {
     GetAllReports();
   }, []);
 
+  const handleStartDateChange = (date) => {
+    setStartDate(date);
+  };
+
+  const handleEndDateChange = (date) => {
+    setEndDate(date);
+  };
+
+  const handleDateRangeSelection = (startDate, endDate) => {
+    console.log("Selected Start Date:", startDate);
+    console.log("Selected End Date:", endDate);
+  };
+
   return (
     <div>
       <Header />
       <Sidebar />
 
-      <div ref={componentRef} class="container" style={{ marginLeft: "200px" }}>
+      <div
+        ref={componentRef}
+        class="container w-100"
+        style={{ marginLeft: "225px" }}
+      >
         <div class="card" style={{ backgroundColor: "white" }}>
           <div
             class="card-header text-center"
@@ -46,12 +68,15 @@ const Reports = () => {
                   <span class="input-group-text" id="basic-addon1">
                     Start Date
                   </span>
+
                   <input
                     type="date"
                     class="form-control"
                     placeholder=" Invoice Date"
                     aria-label="Username"
                     aria-describedby="basic-addon1"
+                    selected={startDate}
+                    onChange={handleStartDateChange}
                   />
                 </div>
               </div>
@@ -60,18 +85,25 @@ const Reports = () => {
                   <span class="input-group-text" id="basic-addon1">
                     End Date
                   </span>
+
                   <input
                     type="date"
                     class="form-control"
                     placeholder=" End Date"
                     aria-label="Username"
                     aria-describedby="basic-addon1"
+                    selected={endDate}
+                    onChange={handleEndDateChange}
                   />
                 </div>
               </div>
               <div class="col-6 mt-3 ">
                 <div class="btn-group" role="group" aria-label="Basic example">
-                  <button type="Submit" class="btn btn-primary btn-lg">
+                  <button
+                    type="Submit"
+                    class="btn btn-primary btn-lg"
+                    onClick={() => handleDateRangeSelection(startDate, endDate)}
+                  >
                     Get Report
                   </button>
                 </div>

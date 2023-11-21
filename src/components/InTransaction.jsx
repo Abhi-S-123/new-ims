@@ -105,7 +105,11 @@ const InTransaction = () => {
       <Header />
       <Sidebar />
 
-      <div ref={componentRef} class="container" style={{ marginLeft: "200px" }}>
+      <div
+        ref={componentRef}
+        class="container w-100"
+        style={{ marginLeft: "225px" }}
+      >
         <div class="card" style={{ backgroundColor: "white" }}>
           <div
             class="card-header text-center"

@@ -52,7 +52,7 @@ body {
   /* padding: 0px 0px 50px; */
   /* box-shadow: 0 6px 7px -3px rgba(0, 0, 0, 0.35); */
   cursor: pointer;
-  margin-left: 430px;
+  margin-left: 500px;
   /* position: fixed; */
   color: pink;
 }
@@ -110,6 +110,7 @@ body {
 .sidebar-list-item:hover {
   background-color: rgba(255, 255, 255, 0.2);
   cursor: pointer;
+  transform: translateY(-10px);
 }
 
 .sidebar-list-item > a {
